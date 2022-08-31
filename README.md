@@ -16,8 +16,10 @@ Once this container has exited, you need to restart your web server.
 ### Variables
 - DOMAIN
 - EMAIL
-- SSL_DOMAIN (optional, useful for wildcard certificates)
 - Every variables you put in *your_config_file*
 
 ## Example:
 You can find actual applications in my others repos: [selfhost](https://github.com/users/AustralEpitech/projects/2).
+
+## To-Do:
+- [ ] Wildcard certificates

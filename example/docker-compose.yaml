@@ -6,7 +6,6 @@ services:
     image: anged/install_site
     environment:
       - DOMAIN=subdomain.example.org
-      - SSL_DOMAIN=*.example.org
       - EMAIL=admin@example.org
     volumes:
       - ./default.conf:/web/default.conf
