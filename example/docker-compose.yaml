@@ -3,9 +3,10 @@ version: "3"
 
 services:
   certs:
-    build: .
+    image: anged/install_site
     environment:
       - DOMAIN=example.org
+      - EMAIL=admin@example.org
     volumes:
       - ./default.conf:/web/default.conf
       - certs:/etc/letsencrypt

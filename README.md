@@ -15,6 +15,7 @@ Once this container has exited, you need to restart your web server.
 
 ### Variables
 - DOMAIN
+- EMAIL
 - Every variables you put in *your_config_file*
 
 ## Example:
