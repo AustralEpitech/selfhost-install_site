@@ -9,10 +9,10 @@ services:
     volumes:
       - ./default.conf:/web/default.conf
       - certs:/etc/letsencrypt
-      - nginx-conf:/sites-availables
+      - sites-availables:/sites-availables
 
 volumes:
   certs:
     external: true
-  nginx-conf:
+  sites-availables:
     external: true

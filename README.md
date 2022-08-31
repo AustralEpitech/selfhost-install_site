@@ -4,7 +4,7 @@ This image was made to complement [selfhost-nginx](https://github.com/AustralEpi
 but any web server should be compatible.
 
 ## How-To
-You need three volumes (check [example](/example):
+You need three volumes (check [example](/example)):
 | Path                    | Description                                               |
 | ----------------------- | --------------------------------------------------------- |
 | /web/*your_config_file* | Website config template. Every variable will be replaced. |
