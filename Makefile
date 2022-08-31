@@ -1,27 +1,24 @@
-NAME = anged/install_site
-VERSION = 0.1
+NAME	=	anged/install_site
+VERSION	=	0.1
 
-.PHONY: build build-nocache tag-latest push push-latest release git-tag-version
+.PHONY:			build build-nocache tag-latest push push-latest release git-tag-version
 
 build:
-	docker build -t $(NAME):$(VERSION) --rm image
+	docker build -t $(NAME):$(VERSION) .
 
 build-nocache:
-	docker build -t $(NAME):$(VERSION) --no-cache --rm image
+	docker build -t $(NAME):$(VERSION) --no-cache .
 
-tag:
-	docker tag $(NAME):$(VERSION) $(NAME):$(VERSION)
-
-tag-latest:
+tag-latest:		build
 	docker tag $(NAME):$(VERSION) $(NAME):latest
 
-push:
+push:			build
 	docker push $(NAME):$(VERSION)
 
-push-latest:
+push-latest:	tag-latest
 	docker push $(NAME):latest
 
-release: build test tag-latest push push-latest
+release:		push push-latest
 
 git-tag-version: release
 	git tag -a v$(VERSION) -m "v$(VERSION)"

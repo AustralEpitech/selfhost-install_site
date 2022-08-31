@@ -5,9 +5,9 @@ services:
   certs:
     build: .
     environment:
-      - DOMAIN=example.org www.example.org
+      - DOMAIN=example.org
     volumes:
-      - ./web_config:/web_config
+      - ./default.conf:/web/default.conf
       - certs:/etc/letsencrypt
       - nginx-conf:/sites-availables
 

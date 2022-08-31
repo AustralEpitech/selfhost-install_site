@@ -1,6 +1,6 @@
 #!/bin/bash
 
-INDIR=/input_files
+INDIR=/web_config
 OUTDIR=/sites-availables
 
 # Generate web server config
@@ -12,7 +12,7 @@ done
 # Generate certificates
 CERTBOT="certbot certonly --standalone --agree-tos --no-eff-email"
 
-for domain in $DOMAINS; do
+for domain in $DOMAIN; do
     CERTBOT+=" -d $domain"
 done
 

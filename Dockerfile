@@ -1,4 +1,4 @@
-FROM certbot
+FROM certbot/certbot
 COPY ./docker-entrypoint.sh /docker-entrypoint.sh
 VOLUME /etc/letsencrypt /sites-availables
 EXPOSE 80 443
