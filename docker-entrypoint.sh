@@ -1,7 +1,5 @@
 #!/bin/bash
-
-INDIR=/web_config
-OUTDIR=/sites-availables
+set -e
 
 # Generate web server config
 mkdir -p "$OUTDIR"
