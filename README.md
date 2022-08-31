@@ -16,6 +16,7 @@ Once this container has exited, you need to restart your web server.
 ### Variables
 - DOMAIN
 - EMAIL
+- SSL_DOMAIN (optional, useful for wildcard certificates)
 - Every variables you put in *your_config_file*
 
 ## Example:

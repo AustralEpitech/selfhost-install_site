@@ -9,6 +9,8 @@ for file in $(cd "$INDIR" && echo *); do
         "$OUTDIR/$file"
 done
 
+[ -n "$SSL_DOMAIN" ] && DOMAIN="$SSL_DOMAIN"
+
 # Generate certificates
 certbot -n certonly \
     --standalone    \
