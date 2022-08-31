@@ -11,9 +11,15 @@ services:
       - ./default.conf:/web/default.conf
       - certs:/etc/letsencrypt
       - sites-availables:/sites-availables
+    networks:
+      - selfhost
 
 volumes:
   certs:
     external: true
   sites-availables:
+    external: true
+
+networks:
+  selfhost:
     external: true
