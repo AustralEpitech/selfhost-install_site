@@ -15,4 +15,4 @@ certbot -n certonly \
     --agree-tos     \
     --no-eff-email  \
     -m "$EMAIL"     \
-    -d "$DOMAIN"    \
+    -d "$BASE_URL"

@@ -14,7 +14,7 @@ You need three volumes (check [example](/example)):
 Once this container has exited, you need to restart your web server.
 
 ### Variables
-- DOMAIN
+- BASE_URL
 - EMAIL
 - Every variables you put in *your_config_file*
 

@@ -2,17 +2,25 @@
 version: "3.5"
 
 services:
-  certs:
-    image: anged/install_site
+  install_site:
+    build: path_to_repo
+    restart: unless_stopped
+    ports:
+      - "80:80"
     environment:
-      - DOMAIN=subdomain.example.org
-      - EMAIL=admin@example.org
+      - BASE_URL=subdomain.domain.tld
+      - EMAIL=admin@domain.tld
     volumes:
       - ./default.conf:/web/default.conf
-      - certs:/etc/letsencrypt
       - sites-availables:/sites-availables
+      - certs:/etc/letsencrypt
+
+  app:
+    build: path_to_app
+    restart: always
     networks:
       - selfhost
+
 
 volumes:
   certs:
