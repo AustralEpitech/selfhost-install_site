@@ -23,11 +23,12 @@ services:
 
 
 volumes:
-  certs:
-    external: true
   sites-availables:
+    external: true
+  certs:
     external: true
 
 networks:
+  default:
   selfhost:
     external: true
