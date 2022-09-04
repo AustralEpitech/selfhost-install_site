@@ -5,7 +5,7 @@ set -e
 mkdir -p "$OUTDIR"
 for file in $(cd "$INDIR" && echo *); do
     envsubst "$(compgen -v | xargs printf '$%s ')" < \
-        "$INDIR/$file" >                                     \
+        "$INDIR/$file" >                             \
         "$OUTDIR/$file"
 done
 
