@@ -1,9 +1,9 @@
 ---
-version: "3.5"
+version: "3.7"
 
 services:
   install_site:
-    build: path_to_repo
+    build: path_to_repo/
     ports:
       - "80:80"
     environment:
@@ -11,11 +11,11 @@ services:
       - EMAIL=admin@domain.tld
     volumes:
       - ./default.conf:/web/default.conf
-      - sites-availables:/sites-availables
-      - certs:/etc/letsencrypt
+      - sites-availables:/sites-availables/
+      - certs:/etc/letsencrypt/
 
   app:
-    build: path_to_app
+    build: path_to_app/
     restart: always
     networks:
       - selfhost

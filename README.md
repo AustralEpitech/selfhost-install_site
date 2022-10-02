@@ -3,7 +3,7 @@ Container to generate config files and certificates for the main web server.<br>
 This image was made to complement [selfhost-nginx](https://github.com/AustralEpitech/selfhost-nginx),
 but any web server should be compatible.
 
-## How-To
+## Quick Start
 You need three volumes (check [example](/example)):
 | Path                    | Description                                               |
 | ----------------------- | --------------------------------------------------------- |
@@ -18,7 +18,7 @@ Once this container has exited, you need to restart your web server.
 - EMAIL
 - Every variables you put in *your_config_file*
 
-## Example:
+## Example
 You can find actual applications in my others repos: [selfhost](https://github.com/users/AustralEpitech/projects/2).
 
 ## To-Do:
