@@ -1,10 +1,9 @@
 FROM certbot/certbot
-RUN apk add --no-cache -u \
-    bash                  \
-    gettext
+RUN apk add --no-cache \
+        bash           \
+        gettext
 COPY docker-entrypoint.sh /usr/local/bin/
-EXPOSE 80
-VOLUME /etc/letsencrypt/ /sites-availables/
-ENV INDIR=/web/
-ENV OUTDIR=/sites-availables/
+ENV INDIR=/web               \
+    OUTDIR=/sites-availables
+VOLUME "$OUTDIR"
 ENTRYPOINT ["docker-entrypoint.sh"]
