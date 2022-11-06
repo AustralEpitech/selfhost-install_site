@@ -16,7 +16,7 @@ services:
 
   app:
     build: path_to_app
-    restart: unless_stopped
+    restart: unless-stopped
     networks:
       - selfhost
 
