@@ -3,7 +3,7 @@ version: "3.7"
 
 services:
   install_site:
-    build: path_to_repo/
+    build: path_to_repo
     ports:
       - "80:80"
     environment:
@@ -15,8 +15,8 @@ services:
       - certs:/etc/letsencrypt/
 
   app:
-    build: path_to_app/
-    restart: always
+    build: path_to_app
+    restart: unless_stopped
     networks:
       - selfhost
 
